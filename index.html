@@ -10,18 +10,32 @@
         padding: 0px;
         background-color: rgb(57, 5, 73);
         font-family: "Roboto";
+        font-size: 30px;
       }
-
+      @media (max-width: 460px) {
+        * {
+          font-size: 25px;
+        }
+        #buttons {
+          flex-direction: column;
+        }
+      }
+      #main {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+      }
       p {
-        margin-top: 10px;
-        font-size: 40px;
+        margin-top: 0.3em;
+        font-size: 1.4em;
         text-align: center;
       }
 
       #inputChar {
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
+        width: 1.4em;
+        height: 1.4em;
+        font-size: 1em;
         text-align: center;
         background-color: rgb(128, 44, 161);
         border: 3px solid rgb(60, 0, 84);
@@ -33,98 +47,86 @@
       }
 
       #inputField {
-        margin-top: 30px;
+        margin-top: 1em;
         text-align: center;
       }
 
       #guess {
-        margin-top: 60px;
+        margin-top: 1em;
         text-align: center;
-        font-size: 50px;
+        font-size: 1.7em;
         word-wrap: break-word;
         white-space: pre-line;
       }
 
       #count {
-        margin-top: 20px;
-        font-size: 20px;
+        margin-top: 0.7em;
+        font-size: 0.7em;
         width: 100%;
         text-align: center;
       }
 
       #error {
-        margin-top: 30px;
-        font-size: 20px;
+        margin-top: 1em;
+        font-size: 0.7em;
         text-align: center;
         font-weight: 100;
-        color: rgba(133, 0, 0, 0.36);
+        color: rgba(255, 34, 34, 0.36);
       }
 
       #buttons {
+        margin-top: 1.1em;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #new,
+      #again {
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.9em;
+        width: 3.9em;
+        font-size: 0.8em;
+        background-color: rgb(100, 9, 93);
+        border-radius: 50%;
         text-align: center;
       }
 
-      #again {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 100px;
-        background-color: rgb(100, 9, 93);
-        border-radius: 50%;
-      }
-
-      #again:hover {
-        cursor: pointer;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-
-      #new {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        margin-bottom: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 100px;
-        background-color: rgb(100, 9, 93);
-        border-radius: 50%;
-      }
-
+      #again:hover,
       #new:hover {
         cursor: pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          0 6px 0.7em 0 rgba(0, 0, 0, 0.19);
       }
     </style>
   </head>
 
   <body>
-    <p>Welcome to GuessWord</p>
-    <h1 style="margin-top: 30px; text-align: center">Now, guess the animal</h1>
-    <div id="guess"></div>
-    <div id="inputField">
-      <input type="text" id="inputChar" maxlength="1" inputmode="latin" />
-    </div>
-    <div id="error"></div>
-    <div id="count">
-      <span>You can guess </span>
-      <span id="counter"></span>
-      <span id="timer"> times left</span>
-    </div>
+    <div id="main">
+      <p>Welcome to GuessWord</p>
+      <h1 style="margin-top: 1em; text-align: center">Now, guess the animal</h1>
+      <div id="guess"></div>
+      <div id="inputField">
+        <input type="text" id="inputChar" maxlength="1" inputmode="latin" />
+      </div>
+      <div id="error"></div>
+      <div id="count">
+        <span>You can guess </span>
+        <span id="counter"></span>
+        <span id="timer"> times left</span>
+      </div>
 
-    <div id="buttons">
-      <span id="again">Again</span>
-      <span id="new">New game</span>
-    </div>
+      <div id="buttons">
+        <div id="again">Again</div>
+        <div id="new">New game</div>
+      </div>
 
-    <div id="status"></div>
+      <div id="status"></div>
+    </div>
   </body>
   <script>
     var hasBone = ["boneless", "bone"];
