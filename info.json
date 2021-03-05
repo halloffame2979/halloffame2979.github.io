@@ -1,0 +1,19 @@
+{
+    "Info":{
+        "name": "Vu Quang Huy",
+        "birth":"20/07/1999",
+        "MSSV":17020804,
+        "gender":"Nam",
+        "email":"17020804@vnu.edu.vn",
+        "relatative":{
+            "father":{
+                "name": "Vu Quang A",
+                "address":"Vietnam"
+            },
+            "mother":{
+                "name":"Vu Thi B",
+                "address":"Vietnam"
+            }
+        }
+    }
+}
