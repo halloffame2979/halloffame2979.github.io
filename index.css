@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(57, 5, 73);
+    font-family: "Roboto";
+    font-size: 30px;
+  }
+  @media (max-width: 460px) {
+    * {
+      font-size: 25px;
+    }
+    #buttons {
+      flex-direction: column;
+    }
+  }
+  #main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  p {
+    margin-top: 0.3em;
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  #inputChar {
+    width: 1.4em;
+    height: 1.4em;
+    font-size: 1em;
+    text-align: center;
+    background-color: rgb(128, 44, 161);
+    border: 3px solid rgb(60, 0, 84);
+    border-radius: 10px;
+  }
+
+  #inputChar:focus {
+    outline: none;
+  }
+
+  #inputField {
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  #guess {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1.7em;
+    word-wrap: break-word;
+    white-space: pre-line;
+  }
+
+  #count {
+    margin-top: 0.7em;
+    font-size: 0.7em;
+    width: 100%;
+    text-align: center;
+  }
+
+  #error {
+    margin-top: 1em;
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: 100;
+    color: rgba(255, 34, 34, 0.36);
+  }
+
+  #buttons {
+    margin-top: 1.1em;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #new,
+  #again {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.9em;
+    width: 3.9em;
+    font-size: 0.8em;
+    background-color: rgb(100, 9, 93);
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  #again:hover,
+  #new:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 0.7em 0 rgba(0, 0, 0, 0.19);
+  }
