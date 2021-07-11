@@ -75,7 +75,7 @@ var hasBone = ["boneless", "bone"];
           },
           eatMeat: {
             river: ["goat", "rhinoceros", "whale", "killer whale", "orca"],
-            ground: ["lion", "tiger", "bear", "wolf", "panther", "leopath"],
+            ground: ["lion", "tiger", "bear", "wolf", "panther", "leopard"],
           },
         },
       },
